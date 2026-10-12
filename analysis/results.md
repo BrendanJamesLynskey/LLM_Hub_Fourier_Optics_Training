@@ -62,7 +62,7 @@ Device as the inference series: 2-megapixel DMD at 1,031 Hz (8-bit), one complex
 | Hyena-2 + block-circulant weights | 2,048 | 512 | 0.15 s | 554 | 0.54 s | 397,218 | 385 s |
 | Hyena-2 + block-circulant weights | 8,192 | 128 | 0.15 s | 2,164 | 2.10 s | 397,168 | 385 s |
 
-*Digital step time* = step FLOPs on an illustrative 64 GPUs at 400 TFLOP/s sustained each. Rewriting the weight masks every step costs time comparable to a whole digital step or more; the data-by-data products would take minutes of mask writes per step, so they stay digital, and only the weight-masked part is a candidate.
+*Digital step time* = step FLOPs on an illustrative 64 GPUs at 400 TFLOP/s sustained each. Rewriting the weight masks every step costs time comparable to a whole digital step or more. The data-by-data products would take minutes of mask writes per step on one device; even spread evenly over one engine per GPU they cost about a whole digital step (Hyena-2) or many steps (block-circulant) to remove a few per cent of the optical work, so they stay digital, and only the weight-masked part is a candidate.
 
 ## 5. Precision: what a training format asks of the ADC
 
