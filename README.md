@@ -1,3 +1,7 @@
+<!-- portfolio-strip:start (brief 40) -->
+<sub>**Brendan Lynskey** · [Portfolio home](https://brendanjameslynskey.github.io/) · [Interactive sites](https://brendanjameslynskey.github.io/#sites)</sub>
+<!-- portfolio-strip:end -->
+
 # Fourier Optics for Training
 
 Could a Fourier-optical engine, which computes a 2-D Fourier transform (and with a mask, a convolution) in one pass of light, accelerate **LLM training**? This mini-series is the companion to [Fourier Optics for Inference](https://github.com/BrendanJamesLynskey/LLM_Hub_Fourier_Optics_Inference). Training adds a backward pass, weights that change every step and gradients that need their own precision. Three interactive decks work through what that changes: where transforms appear in a training step, with an **Amdahl analysis of training-step FLOP shares** from a published, tested script; how optics itself is trained (in-situ backpropagation, physics-aware training); and where an optical engine could sit in a training cluster.
